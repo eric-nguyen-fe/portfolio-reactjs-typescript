@@ -1,0 +1,19 @@
+.m-collapse {
+    width: 100%;
+    height: fit-content;
+    // background-color: #ccc;
+
+    &_header {
+        border: unset;
+        height: rem(30);
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &_content {
+        padding: rem(5);
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,19 @@
+.a-switchs {
+    display: flex;
+    background-color: $silver;
+    gap: rem(5);
+    border-radius: rem(12);
+    cursor: pointer;
+    
+    &_item {
+        border-radius: rem(12);
+        color: $gray-blur;
+        padding: rem(10) rem(16);
+        font-size: rem(18);
+        text-transform: uppercase;
+        
+        &-active {
+            background-color: $blue-main;
+        }
+    }
+}

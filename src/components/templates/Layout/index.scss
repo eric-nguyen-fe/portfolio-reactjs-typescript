@@ -1,0 +1,11 @@
+.t-layout {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    &_wrapper {
+        width: rem(1280);
+        padding: 4px 0 0;
+    }
+}
