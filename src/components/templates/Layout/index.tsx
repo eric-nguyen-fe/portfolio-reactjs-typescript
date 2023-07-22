@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Header from '../Header';
+
 interface LayoutProps {
   children?: React.ReactNode;
 }
@@ -7,10 +9,10 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => (
   <div className="t-layout">
     <div className="t-layout_wrapper">
-      <div className="t-layout_menu">
-        Menu
+      <Header />
+      <div className="t-layout_content">
+        {children}
       </div>
-      {children}
     </div>
   </div>
 );

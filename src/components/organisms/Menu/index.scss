@@ -1,0 +1,16 @@
+.o-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+
+    li a .a-typography {
+        text-transform: capitalize;
+        font-size: 16px;
+        color: #333;
+
+        &:hover {
+            color: #f00;
+        }
+    }
+}
