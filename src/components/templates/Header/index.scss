@@ -3,5 +3,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
+    padding: 16px 24px;
+    max-width: rem(1280);
+    transition: all 0.5s ease;
+    
+    &-fixed {
+        // position: fixed;
+        margin-bottom: 30px;
+        transition: all 0.5s ease;
+    }
+
+    &_left {
+        font-size: 40px;
+        font-weight: 600;
+        color: $white;
+        cursor: pointer;
+    }
 }

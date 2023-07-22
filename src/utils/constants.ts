@@ -1,7 +1,7 @@
-import { io } from 'socket.io-client';
+// import { io } from 'socket.io-client';
 
 export const BASE_URL = process.env.REACT_APP_BASE_URL;
-export const SOCKET = io(process.env.REACT_APP_API_BASE_SOCKET || '');
+// export const SOCKET = io(process.env.REACT_APP_API_BASE_SOCKET || '');
 
 export const LOCAL_STORAGE = {
   LANGUAGE: 'NVS_Language',

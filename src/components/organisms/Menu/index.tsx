@@ -1,14 +1,13 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { IconName } from 'components/atoms/Icon';
 import Typography from 'components/atoms/Typography';
 
 export interface MenuItemType {
   id: string,
   label: string,
-  slug: string,
 }
 
 interface MenuProps {
@@ -45,11 +44,9 @@ const Menu: React.FC<MenuProps> = ({ option }) => {
   }, [indexMenu]);
   return (
     <div className="o-menu">
-      {option.map((item) => (
-        <li key={item.id} className="o-meu_item">
-          <Link to={item.slug}>
-            <Typography content={item.label} />
-          </Link>
+      {option.map((item, idx) => (
+        <li key={idx} className="o-meu_item">
+          <Typography content={item.label} />
         </li>
       ))}
     </div>

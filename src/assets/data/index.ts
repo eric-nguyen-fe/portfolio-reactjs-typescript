@@ -5,36 +5,25 @@ export const dataMenu: MenuItemType[] = [
   {
     id: '0',
     label: 'home',
-    slug: '/',
   },
   {
-    id: '1',
-    label: 'about',
-    slug: '/about',
-  },
-  {
-    id: '0',
+    id: '2',
     label: 'skill',
-    slug: '/skill',
   },
   {
-    id: '0',
-    label: 'work experience',
-    slug: '/experience',
+    id: '3',
+    label: 'experience',
   },
   {
-    id: '0',
-    label: 'certificate',
-    slug: '/certificate',
-  },
-  {
-    id: '0',
+    id: '4',
     label: 'project',
-    slug: '/project',
   },
   {
-    id: '0',
+    id: '5',
+    label: 'Resume',
+  },
+  {
+    id: '6',
     label: 'contact',
-    slug: '/contact',
   },
 ];

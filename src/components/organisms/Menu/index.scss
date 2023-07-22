@@ -2,15 +2,19 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 
-    li a .a-typography {
+    li .a-typography {
         text-transform: capitalize;
         font-size: 16px;
-        color: #333;
+        color: $white;
+        cursor: pointer;
+        transition: all 0.5s ease;
 
         &:hover {
             color: #f00;
+            transform: scale(1.5) translate(4px, 2px) rotate(-5deg);
+            transition: transform 0.5s ease;
         }
     }
 }
