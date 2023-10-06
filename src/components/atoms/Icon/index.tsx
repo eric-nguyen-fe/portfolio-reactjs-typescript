@@ -61,17 +61,33 @@ export type IconName =
   'darkmode' |
   'lightmode' |
   'pauseVoice' |
+  /*  */
   'html' |
-  'sass' |
-  'bootstrap' |
-  'figma' |
-  'javascript' |
+  'css' |
   'typescript' |
-  'photoshop' |
+  'js' |
+  'sql' |
+  'csharp' |
+  'sql-server' |
+  'postgre' |
+  'mongodb' |
   'react' |
+  'nextjs' |
+  'bootstrap' |
+  'express' |
+  'redux-saga' |
+  'git' |
+  'jira' |
+  'figma' |
+  'sass' |
+  'zeplin' |
+  'javascript' |
+  'photoshop' |
+  'nodejs' |
+  'mysql' |
   'redux';
 
-export type IconSize = '6x12' | '8x12' | '10x10' | '14x14' | '16x16' | '17x17' | '18x18' | '20x20' | '20x15' | '24x24' | '28x28' | '32x32' | '40x40' | '80x80' | '5x10' | '69x72' | '34x34' | '30x30' | '12x12' | '25x27' | '25x25' | '17x12' | '21x21' | '25x19' | '36x36' | '22x16' | '26x26' | '30x30' | '44x44' | '120x120' | '17x19';
+export type IconSize = '6x12' | '8x12' | '10x10' | '14x14' | '16x16' | '17x17' | '18x18' | '20x20' | '20x15' | '24x24' | '28x28' | '32x32' | '40x40' | '80x80' | '5x10' | '69x72' | '34x34' | '30x30' | '12x12' | '25x27' | '25x25' | '17x12' | '21x21' | '25x19' | '36x36' | '22x16' | '26x26' | '30x30' | '44x44' | '120x120' | '17x19' | '60x60';
 
 interface IconProps {
   iconName: IconName;

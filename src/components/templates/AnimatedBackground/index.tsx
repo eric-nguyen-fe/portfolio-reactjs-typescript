@@ -2,7 +2,6 @@
 import React, { useCallback } from 'react';
 import Particles from 'react-particles';
 import type { Container, Engine } from 'tsparticles-engine';
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from 'tsparticles-slim'; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
 interface AnimatedBackgroundProps { }
@@ -55,7 +54,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ }) => {
             },
             links: {
               color: '#DDE6ED',
-              distance: 120,
+              distance: 220,
               enable: true,
               opacity: 0.3,
               width: 0.1,
@@ -73,7 +72,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ }) => {
             number: {
               density: {
                 enable: true,
-                area: 1200,
+                area: 1000,
               },
               value: 160,
             },

@@ -1,4 +1,69 @@
 .p-skill {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 110px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_wrap {
+        height: fit-content;
+        width: fit-content;
+    }
+
+    &_item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 32px 0;
+        animation: appeare_skill 0.5s ease-in-out forwards;
+        transition: animation 0.5s ease-in-out;
+        opacity: 0;
+
+        span {
+            font-size: 28px;
+            line-height: 40px;
+            font-weight: 600;
+            color: $white;
+            min-width: 400px;
+        }
+        
+        &:nth-child(1) { animation-delay: 0.5s; }
+        &:nth-child(2) { animation-delay: 1.5s; }
+        &:nth-child(3) { animation-delay: 2.5s; }
+        &:nth-child(4) { animation-delay: 3.5s; }
+        &:nth-child(5) { animation-delay: 4.5s; }
+        &:nth-child(6) { animation-delay: 5.5s; }
+    }
+
+    &_list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        
+        li {
+            transition: all 0.5s ease;
+            padding: 8px;
+
+            &:hover {
+                border-radius: 12px;
+                transform: scale(1.3);
+                transition: transform 0.5s ease-in-out;
+                background-color: $white;
+            }
+        }
+    }
+}
+
+
+@keyframes appeare_skill {
+    0% {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

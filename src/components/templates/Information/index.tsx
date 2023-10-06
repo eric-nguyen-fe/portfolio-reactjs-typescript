@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 
 import Avatar from 'assets/images/avatar.png';
@@ -12,10 +13,11 @@ const Information: React.FC<InformationProps> = ({ }) => (
     <div className="p-information_left">
       <Typography type="h1" content={'Hi, I\'m Nguyen Quoc Dai'} />
       <TypingEffect typeText="h2" text={'I\'m Frontend developer'} />
-      <Typography type="p" content="I am a passionate Frontend Developer with a love for creativity. <br/>I am a quick learner and dedicated to staying updated with the latest technologies. My skills include React.js, Next.js, Typescript, Express.js, and PHP. I am eager to contribute my expertise to projects and collaborate with teams to deliver outstanding web applications. <br/>Thank you for considering my application." />
+      <Typography type="p" content="I aspire to join a dynamic and professional work environment where I can leverage my skills and knowledge in front-end development to make meaningful contributions. With a strong foundation in JavaScript, Typescript, Reactjs and a range of other technologies, coupled with my experience in internships and real-world projects, I am eager to continue growing as a Frontend Developer and collaborate with passionate teams to create innovative web solutions. My dedication, adaptability, and commitment to self-improvement make me an asset in both independent and collaborative settings, especially within startup environments. " />
     </div>
     <div className="p-information_right">
-      <img src={Avatar} />
+      {/* <img src={Avatar} /> */}
+      <Typography type="h2" content="Avatar" modifiers={['white']} />
     </div>
   </div>
 );
