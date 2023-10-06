@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable consistent-return */
 
 import addNotification from 'react-push-notification';
@@ -182,4 +183,32 @@ export const checkUrlVideoYoutube = (url: string): string => {
   }
 
   return url;
+};
+
+export const downloadBlobPDF = (base64Data: any, fileName: string) => {
+  // Chuyển đổi base64 thành mảng byte
+  const byteCharacters = atob(base64Data);
+  const byteNumbers = new Array(byteCharacters.length);
+  for (let i = 0; i < byteCharacters.length; i++) {
+    byteNumbers[i] = byteCharacters.charCodeAt(i);
+  }
+  const byteArray = new Uint8Array(byteNumbers);
+
+  // Tạo một blob từ mảng byte
+  const blob = new Blob([byteArray], { type: 'application/pdf' });
+
+  // Tạo URL cho blob và tạo một liên kết tải xuống
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = fileName;
+  window.open(url);
+
+  // Thêm liên kết vào DOM và kích hoạt sự kiện nhấp chuột
+  document.body.appendChild(link);
+  link.click();
+
+  // Giải phóng tài nguyên sau khi tải xuống hoàn tất
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
 };

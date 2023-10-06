@@ -4,16 +4,16 @@
     align-items: center;
     gap: 30px;
 
-    li .a-typography {
+    li a .a-typography {
         text-transform: capitalize;
-        font-size: 16px;
+        font-size: 18px;
         color: $white;
         cursor: pointer;
         transition: all 0.5s ease;
 
         &:hover {
             color: #f00;
-            transform: scale(1.5) translate(4px, 2px) rotate(-5deg);
+            transform: scale(1.1) translate(2px, 2px);
             transition: transform 0.5s ease;
         }
     }

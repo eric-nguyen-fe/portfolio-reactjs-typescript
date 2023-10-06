@@ -26,7 +26,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ }) => {
           background: {
             image: ''
           },
-          fpsLimit: 1000,
+          fpsLimit: 2000,
           interactivity: {
             events: {
               onClick: {
@@ -44,8 +44,8 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ }) => {
                 quantity: 5,
               },
               repulse: {
-                distance: 200,
-                duration: 0.5,
+                distance: 160,
+                duration: 2,
               },
             },
           },
@@ -73,9 +73,9 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ }) => {
             number: {
               density: {
                 enable: true,
-                area: 800,
+                area: 1200,
               },
-              value: 140,
+              value: 160,
             },
             opacity: {
               value: 0.7,
@@ -84,7 +84,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ }) => {
               type: 'circle',
             },
             size: {
-              value: { min: 1, max: 7 },
+              value: { min: 0.5, max: 8 },
             },
           },
           detectRetina: true,

@@ -20,6 +20,10 @@ const routes = [
   {
     path: '/',
     element: <HomePage />,
+  },
+  {
+    path: '*',
+    element: <HomePage />,
   }
 ];
 const queryClient = new QueryClient({

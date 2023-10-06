@@ -3,11 +3,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import pdfData from 'assets/data/base64.json';
 import Typography from 'components/atoms/Typography';
+import { downloadBlobPDF } from 'utils/functions';
 
 export interface MenuItemType {
   id: string,
   label: string,
+  slug: string,
 }
 
 interface MenuProps {
@@ -16,15 +19,6 @@ interface MenuProps {
 
 const Menu: React.FC<MenuProps> = ({ option }) => {
   const [indexMenu, setIndexMenu] = useState(Math.floor(Math.random() * option.length));
-  useEffect(() => {
-    const random = setTimeout(() => {
-
-    }, 3000);
-
-    return () => {
-      clearTimeout(random);
-    };
-  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,8 +39,18 @@ const Menu: React.FC<MenuProps> = ({ option }) => {
   return (
     <div className="o-menu">
       {option.map((item, idx) => (
-        <li key={idx} className="o-meu_item">
-          <Typography content={item.label} />
+        <li
+          key={idx}
+          className="o-meu_item"
+          onClick={() => {
+            if (item?.slug === '/resume') {
+              downloadBlobPDF(pdfData?.data, 'CV_Frontend_NguyenQuocDai');
+            }
+          }}
+        >
+          <Link to={item.slug}>
+            <Typography content={item.label} />
+          </Link>
         </li>
       ))}
     </div>
