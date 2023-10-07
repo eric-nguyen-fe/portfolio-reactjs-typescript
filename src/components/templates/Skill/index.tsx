@@ -2,6 +2,7 @@
 import React, { useState, useCallback } from 'react';
 
 import Icon, { IconName } from 'components/atoms/Icon';
+import CTooltip from 'components/molecules/CTooltip';
 import { downloadBlobPDF } from 'utils/functions';
 
 interface SkillProps {
@@ -15,12 +16,12 @@ const Skill: React.FC<SkillProps> = ({ }) => {
       id: 0,
       title: 'Languages',
       list: [
-        { id_list: 0, icon: 'html', desc: '' },
-        { id_list: 1, icon: 'css', desc: '' },
-        { id_list: 2, icon: 'js', desc: '' },
-        { id_list: 3, icon: 'typescript', desc: '' },
-        { id_list: 4, icon: 'sql', desc: '' },
-        { id_list: 5, icon: 'csharp', desc: '' },
+        { id_list: 0, icon: 'html', desc: '22' },
+        { id_list: 1, icon: 'css', desc: '33' },
+        { id_list: 2, icon: 'js', desc: '44' },
+        { id_list: 3, icon: 'typescript', desc: '55' },
+        { id_list: 4, icon: 'sql', desc: '66' },
+        { id_list: 5, icon: 'csharp', desc: '77' },
       ]
     },
     {
@@ -85,10 +86,12 @@ const Skill: React.FC<SkillProps> = ({ }) => {
               <span>{skill.title}</span>
               <ul className="p-skill_list">
                 {
-                  skill.list.map((item) => (
-                    <li key={item?.id_list}>
-                      <Icon iconName={item?.icon as IconName} size="60x60" />
-                    </li>
+                  skill.list.map((item, index) => (
+                    <CTooltip label={item.desc} key={item?.id_list}>
+                      <li id={`tooltip_${index}`}>
+                        <Icon iconName={item?.icon as IconName} size="60x60" />
+                      </li>
+                    </CTooltip>
                   ))
                 }
               </ul>
