@@ -6,7 +6,7 @@ import Icon, { IconName, IconSize } from 'components/atoms/Icon';
 import mapModifiers from 'utils/functions';
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  variant?: 'default' | 'borderRadius' | 'contactForm' | 'inputSearch' | 'border8' | 'boxNote' | 'searchAnimate';
+  variant?: 'default' | 'borderRadius' | 'contactForm' | 'inputSearch' | 'border8' | 'boxNote' | 'searchAnimate' | 'simple';
   type?: 'text' | 'number' | 'email' | 'password' | 'date' | 'phone_number';
   error?: string;
   label?: string;

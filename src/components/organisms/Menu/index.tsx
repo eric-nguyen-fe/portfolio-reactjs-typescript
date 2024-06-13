@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import pdfData from 'assets/data/base64.json';
 import Typography from 'components/atoms/Typography';
-import { downloadBlobPDF } from 'utils/functions';
+import mapModifiers, { downloadBlobPDF } from 'utils/functions';
 
 export interface MenuItemType {
   id: string,
@@ -18,37 +18,22 @@ interface MenuProps {
 }
 
 const Menu: React.FC<MenuProps> = ({ option }) => {
-  const [indexMenu, setIndexMenu] = useState(Math.floor(Math.random() * option.length));
+  const [idActive, setIdActive] = useState('0');
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndexMenu(Math.floor(Math.random() * option.length));
-    }, 2000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
-  useEffect(() => {
-    const getAllMenuItem = document.querySelectorAll('.o-menu li');
-    getAllMenuItem.forEach((i) => {
-      i.classList.remove('active');
-    });
-    getAllMenuItem[Number(indexMenu)].classList.add('o-menu_active');
-  }, [indexMenu]);
   return (
     <div className="o-menu">
       {option.map((item, idx) => (
         <li
           key={idx}
-          className="o-meu_item"
+          className={mapModifiers('o-menu_item', idActive === item.id ? 'active' : '')}
           onClick={() => {
+            setIdActive(item?.slug === '/resume' ? '0' : item.id);
             if (item?.slug === '/resume') {
-              downloadBlobPDF(pdfData?.data, 'CV_Frontend_NguyenQuocDai');
+              downloadBlobPDF(pdfData?.data, 'CV_nguyen_quoc_dai_software_developer');
             }
           }}
         >
-          <Link to={item.slug}>
+          <Link to={item?.slug === '/resume' ? '/' : item.slug}>
             <Typography content={item.label} />
           </Link>
         </li>

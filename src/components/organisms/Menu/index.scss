@@ -13,8 +13,12 @@
 
         &:hover {
             color: #f00;
-            transform: scale(1.1) translate(2px, 2px);
-            transition: transform 0.5s ease;
+            transition: all 0.5s ease;
         }
     }
+}
+
+.o-menu_item-active  a .a-typography {
+    color: #f00 !important;
+    transition: all 0.5s ease !important;
 }

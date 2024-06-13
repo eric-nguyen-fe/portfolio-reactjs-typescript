@@ -24,7 +24,6 @@
             padding: rem(8);
         }
 
-
         #{$root}-hasIcon & {
             border-color: $dark-gray;
             border-radius: rem(20);
@@ -155,6 +154,53 @@
 
             .a-icon {
                 background-color: $blue-main;
+            }
+        }
+
+        #{$root}-simple & {
+            border-radius: 2px;
+            border-color: #ced4da;
+            padding: 5px 8px;
+            color: #495057;
+            background-color: #fff !important;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            box-shadow: inset 0 0 0 transparent;
+            transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+            font-size: rem(14);
+            font-weight: 400;
+            line-height: 1.5;
+
+            &:focus {
+                color: #495057;
+                border-color: #80bdff !important;
+                outline: 0;
+                box-shadow: inset 0 0 0 transparent;
+            }
+
+            &::placeholder {
+                color: #ced4da;
+                font-weight: 400 !important;
+                @include font-base(14, 18);
+                text-transform: capitalize;
+
+            }
+
+            &:disabled {
+                background-color: #dbdbdb !important;
+            }
+
+            .a-input_label {
+                font-weight: 400;
+                color: $button-blue;
+            }
+
+            .a-input_error {
+                max-height: rem(14);
+                line-height: rem(14);
+                font-size: rem(12);
+                color: $cg-red;
+                margin: rem(1) rem(2) !important;
             }
         }
         

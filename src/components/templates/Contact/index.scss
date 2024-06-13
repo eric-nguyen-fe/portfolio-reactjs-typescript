@@ -1,0 +1,18 @@
+.t-contact {
+    width: 100vw;
+    height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+        background-color: #333;
+        padding: 20px;
+        width: calc(100vw * 0.6);
+
+        .a-textarea_input {
+            min-height: 160px;
+            border-radius: 4px;
+        }
+    }
+}

@@ -8,7 +8,7 @@ import Experience from 'components/templates/Experience';
 import Information from 'components/templates/Information';
 import Layout from 'components/templates/Layout';
 import Project from 'components/templates/Project';
-import Skill from 'components/templates/Skill';
+import Skill from 'components/templates/Skills';
 
 const HomePage: React.FC = () => {
   const location = useLocation();

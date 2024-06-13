@@ -5,8 +5,8 @@
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true,
-    "source.fixAll.eslint": true
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "[javascript]": {
     "editor.formatOnSave": true,
@@ -44,9 +44,12 @@
     "typescriptreact"
   ],
   "cSpell.words": [
+    "Castis",
     "gainsboro",
     "Hygen",
+    "Nextjs",
     "Stylelint",
-    "tsparticles"
+    "tsparticles",
+    "Zalo"
   ]
 }
